@@ -1,0 +1,10 @@
+^C:\USERS\ВИТАЛИЙ\DOWNLOADS\05.HOMEWORK-12995-FE119A\06.HOMEWOARK\CMAKELISTS.TXT
+setlocal
+D:\CMAKE\bin\cmake.exe -SC:/Users/Виталий/Downloads/05.homework-12995-fe119a/06.homewoark -BC:/Users/Виталий/Downloads/05.homework-12995-fe119a/06.homewoark/build --check-stamp-file C:/Users/Виталий/Downloads/05.homework-12995-fe119a/06.homewoark/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,6 +1,6 @@
 #include <iostream>
-
-
+#include <vector>
+using std::vector;
 template <typename T>
 class List{
 public:
@@ -10,6 +10,7 @@ public:
     }
     void push_back(T data);
     void erase(int index);
+    void erase(std::vector<int>vec);
     void insert(int index, T data);
     int size(){return size_;}
     T& operator[] (const int index);

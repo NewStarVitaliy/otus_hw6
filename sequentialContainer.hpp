@@ -1,5 +1,6 @@
 #include <iostream>
-
+#include <vector>
+using std::vector;
 template<typename T>
 class CountainerSTL{
     public:
@@ -48,14 +49,26 @@ class CountainerSTL{
         new_value = m_value; 
         m_size -= 1; 
     }
+    void erase(vector<int> vec){
+        for(int j = 0; j< vec.size(); j++){
+            m_value = new T[m_size-1];
+            for (size_t i = 0; i < m_size; ++i) {             
+                if (i > vec[j]){
+                    m_value[i-1] = new_value[i];
+                }else if (i < vec[j])m_value[i] = new_value[i];
+            }
+            m_value[m_size -1] = new_value[m_size];
+            delete [] new_value; 
+            new_value = m_value; 
+            m_size -= 1; 
+        }
+    }
+    CountainerSTL operator [] (const int index){
+        return *(new_value + counter - 1);
+    }
     size_t size(){
         return m_size;
     }
-
-
-   // CountainerSTL operator [] (const int counter) const{
-       // return *(new_value+ counter-1);
-// }
 
     private:
     T value;
