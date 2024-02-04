@@ -1,4 +1,0 @@
-C:/Users/Виталий/Downloads/05.homework-12995-fe119a/06.homewoark/build/CMakeFiles/sequentialContainer.dir
-C:/Users/Виталий/Downloads/05.homework-12995-fe119a/06.homewoark/build/CMakeFiles/ListTypeContainer.dir
-C:/Users/Виталий/Downloads/05.homework-12995-fe119a/06.homewoark/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/Виталий/Downloads/05.homework-12995-fe119a/06.homewoark/build/CMakeFiles/ZERO_CHECK.dir
