@@ -33,6 +33,7 @@ int main(){
         std::cout<< countainer.new_value[i] << " ";
     }
     std::cout << std::endl;
+    return 0;
     /*std::cout << std::endl;
     countainer.insert(2, 99);
     countainer.erase(3);

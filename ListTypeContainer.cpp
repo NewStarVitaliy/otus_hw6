@@ -89,6 +89,21 @@ void List<T>::insert(int index_, T data){
         size_++;
     }
 }
+template <typename T>
+void List<T>::clear(){
+    while(size_){
+        Pointer<T> *ptr = head;
+        head = head->next;
+        delete head;
+        size_--;
+    }
+}
+
+template <typename T>
+List<T>::~List(){
+    clear();
+}
+
 int main(){
 
     List<int> lst;
@@ -101,7 +116,7 @@ int main(){
     }
     std::cout << std::endl;
     std::cout << lst.size() << std::endl;
-    vector<int> vec{2,3,4}; // не понимаю, если удалять 3,5,7 элемент каждый после удаления предыдущего будет иметь индекс -1
+    vector<int> vec{2,3,4}; 
     lst.erase(vec);
     for (int i = 0; i < lst.size(); i++)
     {
@@ -127,5 +142,5 @@ int main(){
         std::cout << lst[i]<< " ";
     }
     std::cout << std::endl;
-
+    return 0;
 }

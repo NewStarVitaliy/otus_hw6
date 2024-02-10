@@ -64,7 +64,7 @@ class CountainerSTL{
         }
     }
     CountainerSTL operator [] (const int index){
-        return *(new_value + counter - 1);
+        return *(new_value + index - 1);
     }
     size_t size(){
         return m_size;
