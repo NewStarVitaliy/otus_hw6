@@ -94,7 +94,7 @@ void List<T>::clear(){
     while(size_){
         Pointer<T> *ptr = head;
         head = head->next;
-        delete head;
+        delete ptr;
         size_--;
     }
 }
